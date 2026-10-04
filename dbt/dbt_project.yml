@@ -1,0 +1,15 @@
+name: 'azure_snowflake_dbt_pipeline'
+version: '1.0.0'
+config-version: 2
+
+profile: 'azure_snowflake_dbt_pipeline'
+
+model-paths: ["models"]
+test-paths: ["tests"]
+
+models:
+  azure_snowflake_dbt_pipeline:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table
